@@ -1,0 +1,22 @@
+int x = 0;
+int speed = 5;
+
+void setup() {
+  size (500,500);
+  smooth();
+}
+
+void draw () {
+  background(155) ;
+  x = x + speed;
+  
+  if ((x > width) || (x < 0)) {
+    speed = speed = -1;
+  }
+  
+    stroke(0,0,255);
+    fill(255,0,0);
+    line(x,x,250,250);
+    line(x,250,0,500);
+    line(x,250,500,500);
+}
