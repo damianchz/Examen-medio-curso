@@ -1,0 +1,20 @@
+int x = 0;
+int speed = 5;
+
+void setup() {
+  size (500,500);
+  smooth();
+}
+
+void draw () {
+  background(155) ;
+  x = x + speed;
+  
+  if ((x > width) || (x < 0)) {
+    speed = speed = -1;
+  }
+  
+    stroke(0,0,255);
+    fill(255,0,0);
+    ellipse (x,100,32,32);
+}
