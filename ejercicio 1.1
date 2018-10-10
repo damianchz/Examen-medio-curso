@@ -1,0 +1,30 @@
+int x = 0;
+int speed = 5;
+    int var1 = 125;
+int var2 = 375;
+int var3 = 10;
+int var4 = var3 + 115;
+int var5 = var4 + 250;
+
+void setup() {
+  size (500,500);
+  smooth();
+}
+
+void draw () {
+  background(155) ;
+  x = x + speed;
+  
+  if ((x > width) || (x < 0)) {
+    speed = speed = -1;
+  }
+  
+    stroke(0,0,255);
+    fill(0,200,0);
+ellipse(x,var4,var4,var4);
+ellipse(var4,x,var4,var4);
+ellipse(var5,var4,x,var4);
+ellipse(var5,var5,var4,x);
+    
+    
+}
